@@ -25,11 +25,22 @@ export default function App() {
       return currentList.filter((item) => item.id !== itemId);
     });
   };
+  const cancelItemAdditionHandler = () => {
+    setIsAddMode(false);
+  };
   return (
     <View style={styles.container}>
       <Text style={styles.header}>Grocery List</Text>
-      <Button title="Add New Item" onPress={() => setIsAddMode(true)} />
-      <GroceryInput visible={isAddMode} onAddItem={addItemHandler} />
+      <Button
+        title="Add New Item"
+        color="limegreen"
+        onPress={() => setIsAddMode(true)}
+      />
+      <GroceryInput
+        visible={isAddMode}
+        onAddItem={addItemHandler}
+        onCancel={cancelItemAdditionHandler}
+      />
       <StatusBar style="auto" />
       <FlatList
         data={groceryList}
@@ -52,8 +63,9 @@ const styles = StyleSheet.create({
     padding: 40,
   },
   header: {
-    fontSize: 24,
+    fontSize: 50,
     color: "black",
     padding: 10,
+    fontWeight: "bold",
   },
 });

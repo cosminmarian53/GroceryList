@@ -6,6 +6,10 @@ const GroceryInput = (props) => {
   const itemInputHandler = (enteredText) => {
     setEnteredItem(enteredText);
   };
+  const addItemHandler = () => {
+    props.onAddItem(enteredItem);
+    setEnteredItem("");
+  };
   return (
     <Modal visible={props.visible} animationType="slide">
       <View style={styles.inputContainer}>
@@ -16,10 +20,16 @@ const GroceryInput = (props) => {
           value={enteredItem}
         />
         <View style={styles.buttonContainer}>
-          <Button
-            title="Add Item"
-            onPress={() => props.onAddItem(enteredItem)}
-          />
+          <View style={styles.button}>
+            <Button title="Cancel" onPress={props.onCancel} color="red" />
+          </View>
+          <View style={styles.button}>
+            <Button
+              title="Add Item"
+              color="limegreen"
+              onPress={addItemHandler}
+            />
+          </View>
         </View>
       </View>
     </Modal>
@@ -33,6 +43,7 @@ const styles = StyleSheet.create({
     margin: 10,
     padding: 10,
     width: "95%",
+    borderRadius: 10,
   },
   inputContainer: {
     flex: 1,
@@ -40,10 +51,14 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignContent: "center",
   },
+  button: {
+    flex: 1,
+    margin: 5,
+    borderRadius: 20,
+  },
   buttonContainer: {
     justifyContent: "center",
-    alignContent: "center",
-    margin: 10,
+    flexDirection: "row",
   },
 });
 
