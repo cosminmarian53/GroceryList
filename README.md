@@ -11,9 +11,9 @@ Hello and welcome to my Grocery List Mobile Application repository! This app is 
 - **Remove Items:** Edit or remove items from your lists as needed.
 ## Technologies Used
 
-- **React Native:** We've built the app using React Native, allowing for cross-platform compatibility.
+- **React Native:** I've built the app using React Native, allowing for cross-platform compatibility.
 - **Redux:** Redux is utilized for state management, providing a predictable and centralized state container.(!!WILL BE USED!!)
-- **React Navigation:** We've used React Navigation for smooth and intuitive navigation within the app.
+- **React Navigation:** I've used React Navigation for smooth and intuitive navigation within the app.
 
 # Installation
 In order to install and test this application on your mobile device/emulator you must follow the steps listed bellow:
