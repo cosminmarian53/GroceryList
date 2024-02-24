@@ -36,8 +36,8 @@ npx expo start
 
 ## 5.Run the application on your preferred platform:
 
-Now, for Android you have 2 options:
+## Now, for Android you have 2 options:
 a)Run npx expo start and after that you press *A* on your keyboard to start the application
 b)You can simply use *npm run android* and it will automatically start
-For iOS, you can simply use *npm run ios* and it will automatically start.
+## For iOS, you can simply use *npm run ios* and it will automatically start.
 And, if you want to run this on your own mobile device, go to Play Store/App Store, install ExpoGO, scan the QR code that they give you when you run any of the commands that I mentioned before, and it will open the app on your device.
