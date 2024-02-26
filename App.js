@@ -16,6 +16,7 @@ export default function App() {
   const addItemHandler = (itemTitle) => {
     if (itemTitle.length === 0) {
       alert("Please enter a valid item");
+      return;
     }
     setGroceryList((currentList) => [
       ...currentList,
