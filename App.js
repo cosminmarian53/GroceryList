@@ -14,6 +14,9 @@ export default function App() {
   const [groceryList, setGroceryList] = useState([]);
   const [isAddMode, setIsAddMode] = useState(false);
   const addItemHandler = (itemTitle) => {
+    if (itemTitle.length === 0) {
+      alert("Please enter a valid item");
+    }
     setGroceryList((currentList) => [
       ...currentList,
       { id: Math.random().toString(), value: itemTitle },
